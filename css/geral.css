@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Send Flowers', cursive;
+    font-family: 'Wellfleet', cursive;
+}
+
+nav {
+    background-color: #8a171a;
+    padding: 1rem 0rem;
+}
+
+nav button {
+    margin-left: 1rem;
+}
+
+header {
+    padding: 1rem 0rem 1rem;
+}
+
+.logo {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+#btn-mobile {
+    display: flex;
+    padding: .5rem .1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#icone {
+    color: white;
+    display: block;
+    width: 20px;
+    border-top: 2px solid;
+}
+
+#icone::before,
+#icone::after {
+    width: 20px;
+    height: 2px;
+    content: "";
+    display: block;
+    margin-top: 5px;
+    background: currentColor;
+    transition: .3s;
+    position: relative;
+}
+
+#nav.active #icone {
+    border-top-color: transparent;
+}
+
+#nav.active #icone::before {
+    transform: rotate(135deg);
+}
+
+#nav.active #icone::after {
+    transform: rotate(-135deg);
+    top: -7px;
+}
+
+#nav.active #menu {
+    display: inline;
+    gap: .5rem;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    height: 20vh;
+    width: 100%;
+    right: 0;
+    background: #8a171a;
+    padding: 1rem 0rem;
+    ;
+    display: block;
+    z-index: 1000;
+    visibility: visible;
+    overflow-y: auto;
+}
+
+#menu {
+    display: block;
+    gap: .5rem;
+    height: 0;
+    transition: .6s;
+    visibility: hidden;
+    overflow-y: hidden;
+}
+
+#menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    display: block;
+    padding: .5rem;
+    border-bottom: 2px solid #ffffff;
+    padding: 1rem 0rem;
+}
+
+#menu a:hover {
+    padding: 1rem 0rem;
+    ;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: #1d3262;
+    text-decoration: underline;
+}
+
+
+@media (min-width: 600px) {
+    #btn-mobile {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        gap: .5rem;
+    }
+
+    #menu {
+        display: flex;
+        height: auto;
+    }
+
+    #menu a {
+        border: none;
+        visibility: visible;
+        overflow-y: visible;
+    }
+
+}
+
+footer {
+    background-color: #8a171a;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    align-items: center;
+}
+
+@media (min-width: 1000px) {
+    #menu_um, #menu_dois, #menu_tres {
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: 40%;
+    }
+}
